@@ -15,7 +15,7 @@ const IndexPage = () => (
     <SEO
       title="laine, hellbat"
       description="THANK U DAVID ♥"
-      keywords="pranav, ambwani, pranav ambwani, Pranav Ambwani, Pranav, Ambwani, LG Electronics, LavaLab,USC, American Express, IBM, Product Management, Program Management, Technical Product Management, Product, product, management, software developer, software, developer, javascript, c++"
+      keywords="laine, hellbat"
       image="https://i.imgur.com/ovGo1tx.png"
     />
     <Helmet>
@@ -26,10 +26,10 @@ const IndexPage = () => (
             "@context": "http://schema.org",
             "@type": "Person",
             "url": "https://hellbat.net/",
-            "name": "Pranav Ambwani",
+            "name": "laine g.",
             "sameAs": [
-              "https://www.facebook.com/ambwanipranav",
-              "https://www.linkedin.com/in/pranavambwani/"
+              "https://www.hellbat.net/",
+              "https://www.hellbat.net//"
             ]
           }
         `}
@@ -40,7 +40,7 @@ const IndexPage = () => (
             "@context": "http://schema.org",
             "@type": "WebSite",
             "url": "https://hellbat.net/",
-            "name": "Pranav Ambwani"
+            "name": "laine g."
           }
         `}
       </script>
@@ -63,13 +63,13 @@ const IndexPage = () => (
 
         <div className="Logos">
           <a
-            href="mailto:pranav@pranav.tech?Subject=Hi%20Pranav!"
+            href="mailto:xx"
             aria-label="link-to-email"
           >
             <FaRegEnvelope />
           </a>
           <a
-            href="https://www.linkedin.com/in/pranavambwani"
+            href="https://www.hellbat.net/"
             target="_blank"
             rel="noreferrer"
             aria-label="link-to-linkedin"
