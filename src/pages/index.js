@@ -13,7 +13,7 @@ import Popup from '../components/popup'
 const IndexPage = () => (
   <div>
     <SEO
-      title="Laine"
+      title="laine, hellbat"
       description="THANK U DAVID ♥"
       keywords="pranav, ambwani, pranav ambwani, Pranav Ambwani, Pranav, Ambwani, LG Electronics, LavaLab,USC, American Express, IBM, Product Management, Program Management, Technical Product Management, Product, product, management, software developer, software, developer, javascript, c++"
       image="https://i.imgur.com/ovGo1tx.png"
