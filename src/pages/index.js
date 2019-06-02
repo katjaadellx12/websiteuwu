@@ -16,7 +16,7 @@ const IndexPage = () => (
       title="laine, hellbat"
       description="THANK U DAVID ♥"
       keywords="laine, hellbat"
-      image="https://i.imgur.com/ovGo1tx.png"
+      image="https://imgur.com/a/H99lRoj"
     />
     <Helmet>
       <link rel="canonical" href="https://pranav.tech" />
