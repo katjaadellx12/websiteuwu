@@ -1,0 +1,69 @@
+/* Control size, etc. of the container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 40px;
+}
+
+/* Hide the input checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  box-shadow: 0 0 5px #fd777f;
+}
+
+/* Control size, etc. of the eclipse logo */
+/* Object (sun) for light mode configuration */
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 35px;
+  width: 35px;
+  left: 3px;
+  bottom: 3px;
+  -webkit-transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background-image: url('../images/sun.svg');
+}
+
+/* Object (moon) for dark mode configuration */
+input:checked + .slider:before {
+  background-image: url('../images/moon.svg');
+}
+
+input:checked + .slider {
+  background: #2c3e50;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(35px);
+  -ms-transform: translateX(35px);
+  transform: translateX(35px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+  background-color: #83d8ff;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

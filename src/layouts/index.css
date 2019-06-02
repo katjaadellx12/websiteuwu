@@ -1,0 +1,328 @@
+/* global.css */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  /* make fonts look a little smoother (only on Safari) */
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  line-height: 1.3;
+  background: #f3f3f3;
+}
+
+/* Override default text selection color */
+::selection {
+  background: rgba(154, 236, 219, 0.5); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: rgba(154, 236, 219, 0.5); /* Gecko Browsers */
+}
+
+a {
+  text-decoration: none;
+  color: #fc427b;
+  font-weight: 600;
+}
+
+.Hero {
+  position: relative;
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.HeroGroup {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 150px 0 0;
+  text-align: center;
+}
+
+.Hero h1 {
+  margin: 0;
+  padding: 0;
+  color: #141010;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.Hero p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #141010;
+  font-weight: 500;
+}
+
+.Animation {
+  animation: HeroAnimation 2s cubic-bezier(0.4, 0, 0, 1.34);
+}
+
+.Logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
+.Logos a {
+  text-decoration: none;
+}
+
+.Logos svg {
+  height: 2.5em;
+  width: 3em;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Logos > a:nth-child(1) > svg > path {
+  fill: #ff3333;
+}
+
+.Logos > a:nth-child(2) > svg > path {
+  fill: #4875b4;
+}
+
+.Logos > a:nth-child(3) > svg > path {
+  fill: black;
+}
+
+.Logos svg:hover {
+  transform: translateY(-5px);
+  /* bottom only shadow -set the spread (4th value) to negative of blur (3rd value) */
+}
+
+.Hero button {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.Hero button:hover {
+  padding: 10px 25px;
+}
+
+.Hero .HeartIcon {
+  animation: 0.8s infinite HeartBeatAnimation;
+  color: #ea2027;
+  position: relative;
+}
+
+/* Heart beat  */
+@keyframes HeartBeatAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes HeaderAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.001);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Fade-in content, from bottom to top */
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 640px) {
+  .Hero h1 {
+    font-size: 45px;
+  }
+
+  .Hero p {
+    font-size: 20px;
+  }
+
+  .Hero button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .Logos svg {
+    width: 2em;
+  }
+}
+
+.dark {
+  background: #282c34;
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark h1 {
+  color: #ffa7c4;
+}
+
+.dark h2,
+.dark h3,
+.dark p,
+.dark div {
+  color: white;
+}
+
+.dark hr {
+  color: white; /* old IE */
+  background-color: white; /* Modern Browsers */
+}
+
+.dark path {
+  fill: #ffa7c4;
+}
+
+.dark .Logos > a:nth-child(1) > svg > path,
+.dark .Logos > a:nth-child(2) > svg > path,
+.dark .Logos > a:nth-child(3) > svg > path {
+  fill: white;
+}
+
+.dark .HeartIcon {
+  color: #ffa7c4;
+}
+
+.dark ::-webkit-input-placeholder {
+  /* Edge */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark input,
+.dark select {
+  border: 1px solid white;
+  color: white;
+}
+
+.dark button {
+  background: #ffa7c4;
+  color: #282c34;
+}
+
+/* Animations for success page */
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #55efc4;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #55efc4;
+}
+
+#successAnimationResult {
+  fill: #55efc4;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  animation: 1s ease-out 0s 1 both scaleAnimation;
+}
+
+#successAnimationCircle {
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCircle,
+    0.3s linear 0.9s 1 both fadeOut;
+}
+
+#successAnimationCheck {
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 both drawCheck,
+    0.3s linear 0.9s 1 both fadeOut;
+}
+
+#successAnimationResult {
+  animation: 0.3s linear 0.9s both fadeIn;
+}
